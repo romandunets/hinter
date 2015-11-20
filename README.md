@@ -1,2 +1,2 @@
-# hinter
-Personal Organizer on Rails
+# Hinter
+This is web-based personal organizer tool on Rails.
