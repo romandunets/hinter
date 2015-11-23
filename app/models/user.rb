@@ -1,8 +1,5 @@
 class User < ActiveRecord::Base
-  attribute :email
-  attribute :hashed_password
-
-  attr_accessible :email
+  attr_accessor :email
 
   validates :email, presence: true
 end
