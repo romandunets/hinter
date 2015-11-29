@@ -31,7 +31,7 @@ html, body, #page, #cover {
         padding: 20px 0px;
       }
     }
-}
+  }
 
   #cover {
     display: table-cell;
@@ -48,6 +48,19 @@ html, body, #page, #cover {
         width: 140px;
         margin-top: 20px;
       }
+    }
+  }
+
+  .form-narrow {
+    max-width: 600px;
+    margin: auto;
+
+    fieldset {
+      margin: 10px 0px;
+    }
+
+    input[type="submit"] {
+      width: 150px;
     }
   }
 }
