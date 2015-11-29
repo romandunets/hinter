@@ -14,9 +14,10 @@
     </div>
   </div>
 
-  <div class="container text-center">
-    <h1>Sign up</h1>
+  <div class="container">
+    <h1 class="text-center">Sign up</h1>
     <%= form_for(@user, html: { class: "form-horizontal form-narrow" }) do |f| %>
+      <%= render 'shared/error_messages' %>
       <fieldset>
         <div class="form-group">
           <%= f.label :email, class: "control-label col-sm-2" %>
@@ -42,7 +43,9 @@
         </div>
       </fieldset>
 
-      <%= f.submit "Create account", class: "btn btn-primary" %>
+      <fieldset class="text-center">
+        <%= f.submit "Create account", class: "btn btn-primary" %>
+      </fieldset>
     <% end %>
   </div>
 </div>
