@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hinter</title>
-  <%= favicon_link_tag 'icon.png' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<% flash.each do |message_type, message| %>
+  <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+<% end %>
 
-  <% flash.each do |message_type, message| %>
-    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-  <% end %>
-  <%= yield %>
+<%= yield %>
 
-</body>
-</html>
+<% parent_layout "base" %>
