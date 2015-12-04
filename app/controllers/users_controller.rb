@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  layout "static", only: [:new]
+  layout "static", only: [:new, :create]
 
   def show
     @user = User.find(params[:id])
