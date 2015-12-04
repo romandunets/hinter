@@ -34,6 +34,12 @@ html, body, #page, #content, #cover {
 
   #content {
     display: table-row;
+
+    .vertical-center {
+      display: table-cell;
+      padding-bottom: 60px;
+      vertical-align: middle;
+    }
   }
 
   #cover {
