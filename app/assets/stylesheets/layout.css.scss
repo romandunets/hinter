@@ -59,7 +59,8 @@ html, body, #page, #content, #cover {
   }
 
   .form-narrow {
-    max-width: 600px;
+    max-width: 360px;
+    padding: 20px;
     margin: auto;
 
     fieldset {
@@ -67,7 +68,7 @@ html, body, #page, #content, #cover {
     }
 
     input[type="submit"] {
-      width: 150px;
+      width: 180px;
     }
   }
 

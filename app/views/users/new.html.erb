@@ -6,31 +6,22 @@
 
     <fieldset>
       <div class="form-group">
-        <%= f.label :email, class: "control-label col-sm-2" %>
-        <div class="col-sm-10">
-          <%= f.email_field :email, class: "form-control" %>
-        </div>
+        <%= f.email_field :email, placeholder: "Email", class: "form-control input-lg" %>
       </div>
     </fieldset>
 
     <fieldset>
       <div class="form-group">
-        <%= f.label :password, class: "control-label col-sm-2" %>
-        <div class="col-sm-10">
-          <%= f.password_field :password, class: "form-control" %>
-        </div>
+        <%= f.password_field :password, placeholder: "Password", class: "form-control input-lg" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation, "Confirmation", class: "control-label col-sm-2" %>
-        <div class="col-sm-10">
-          <%= f.password_field :password_confirmation, class: "form-control" %>
-        </div>
+        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "form-control input-lg" %>
       </div>
     </fieldset>
 
     <fieldset class="text-center">
-      <%= f.submit "Create account", class: "btn btn-primary" %>
+      <%= f.submit "Create Account", class: "btn btn-lg btn-primary" %>
     </fieldset>
   <% end %>
 </div>
