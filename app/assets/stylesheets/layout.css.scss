@@ -17,7 +17,7 @@ html, body, #page, #content, #cover {
       border-bottom: 1px solid #bdbdbd;
 
       #header {
-        background: url('icon.png') no-repeat 0px 5px;
+        background: image-url('icon.png') no-repeat 0px 5px;
         background-size: 50px 50px;
         font-size: 32px;
         font-weight: bold;
@@ -45,7 +45,7 @@ html, body, #page, #content, #cover {
   #cover {
     display: table-cell;
     padding-bottom: 40px;
-    background: url('background.jpg') no-repeat center center;
+    background: image-url('background.jpg') no-repeat center center;
     background-size: cover;
     vertical-align: middle;
     color: #ffffff;
