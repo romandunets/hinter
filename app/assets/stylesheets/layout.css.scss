@@ -91,7 +91,7 @@ html, body, #page, #content, #cover {
   position: fixed;
   width: 250px;
   height: 100%;
-  background: #222629;
+  background: #222629 image-url("overlay.png");
 
   #avatar {
     max-width: 150px;
@@ -104,5 +104,42 @@ html, body, #page, #content, #cover {
     color: #ffffff;
     font-weight: 600;
     font-size: 12pt;
+  }
+
+  #navigation {
+    padding-top: 25px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      a {
+        display: block;
+        padding: 10px 25px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &.active {
+          background: rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.125);
+          color: #fff;
+        }
+      }
+
+      #settings-bullet {
+        background: image-url('settings.png') no-repeat 25px 8px;
+        background-size: 30px 30px;
+      }
+
+      #logout-bullet {
+        background: image-url('logout.png') no-repeat 25px 8px;
+        background-size: 30px 30px;
+      }
+    }
   }
 }
