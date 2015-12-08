@@ -3,6 +3,12 @@
     <%= image_tag("user.png", alt: "avatar", id: "avatar") %>
     <span id="title"><%= @user.email %></span>
   </div>
+  <nav id="navigation">
+    <ul>
+      <li id="settings-bullet"><%= link_to "Settings", "#", class: "text-right" %></li>
+      <li id="logout-bullet"><%= link_to "Log out", logout_path, method: :delete, class: "text-right" %></li>
+    </ul>
+  </nav>
 </div>
 
 <div id="content">
