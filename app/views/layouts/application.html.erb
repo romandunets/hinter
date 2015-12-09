@@ -1,7 +1,24 @@
-<% flash.each do |message_type, message| %>
-  <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-<% end %>
+<div id="sidebar">
+  <div class="text-center">
+    <%= image_tag("user.png", alt: "avatar", id: "avatar") %>
+    <span id="title"><%= @user.email %></span>
+  </div>
+  <nav id="navigation">
+    <ul>
+      <li id="settings-bullet"><%= link_to "Settings", "#", class: "text-right" %></li>
+      <li id="logout-bullet"><%= link_to "Log out", logout_path, method: :delete, class: "text-right" %></li>
+    </ul>
+  </nav>
+</div>
 
-<%= yield %>
+<div id="content">
+  <div id="messages">
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
+  </div>
+
+  <%= yield %>
+</div>
 
 <% parent_layout "base" %>
