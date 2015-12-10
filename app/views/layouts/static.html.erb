@@ -7,7 +7,11 @@
         </div>
         <div class="pull-right">
           <li>
-            <%= link_to "LOG IN", login_path %>
+            <% if logged_in? %>
+              <%= link_to current_user.email, user_path(current_user) %>
+            <% else %>
+              <%= link_to "LOG IN", login_path %>
+            <% end %>
           </li>
         </div>
       </div>
