@@ -69,6 +69,11 @@ html, body, #page, #content, #cover {
     input[type="submit"] {
       width: 180px;
     }
+
+    .checkbox {
+      padding: 3px 20px;
+      text-align: center;
+    }
   }
 
   #errors {
