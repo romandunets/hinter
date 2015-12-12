@@ -1,0 +1,12 @@
+<div class="page-header content-component">
+  <h2>My profile</h2>
+</div>
+
+<div class="content-component">
+  <div class="pull-left">
+    <%= image_tag("user.png", alt: "avatar", class: "profile-image") %>
+  </div>
+  <div class="pull-left profile-info">
+    <h3><%= @user.email %></h3>
+  </div>
+</div>
