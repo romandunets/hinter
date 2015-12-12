@@ -10,6 +10,13 @@
       <div class="form-group">
         <%= f.password_field :password, placeholder: "Password", class: "form-control input-lg" %>
       </div>
+
+      <div class="form-group">
+        <%= f.label :remember_me, class: "checkbox" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me</span>
+        <% end %>
+      </div>
     </fieldset>
 
     <fieldset class="text-center">
