@@ -2,9 +2,11 @@
   <div id="navigation">
     <div class="wrapper">
       <div class="container">
-        <div id="header" class="pull-left">
-          <span>inter</span>
-        </div>
+        <%= link_to root_path do %>
+          <div id="header" class="pull-left">
+            <span>inter</span>
+          </div>
+        <% end %>
         <div class="pull-right">
           <li>
             <% if logged_in? %>
