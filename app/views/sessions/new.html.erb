@@ -21,6 +21,10 @@
 
     <fieldset class="text-center">
       <%= f.submit "Login", class: "btn btn-lg btn-primary" %>
+      <div>
+        <span>New user?</span>
+        <%= link_to "Sign up", signup_path %>
+      </div>
     </fieldset>
   <% end %>
 </div>
