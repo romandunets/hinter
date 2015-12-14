@@ -59,24 +59,6 @@ html, body, #page, #content, #cover {
     }
   }
 
-  .form-narrow {
-    max-width: 340px;
-    margin: auto;
-
-    fieldset {
-      margin: 10px 0px;
-    }
-
-    input[type="submit"] {
-      width: 180px;
-    }
-
-    .checkbox {
-      padding: 3px 20px;
-      text-align: center;
-    }
-  }
-
   #errors {
     color: red;
     ul {
@@ -170,5 +152,23 @@ html, body, #page, #content, #cover {
     h3 {
       margin-top: 10px
     }
+  }
+}
+
+.form-narrow {
+  max-width: 340px;
+  margin: auto;
+
+  fieldset {
+    margin: 10px 0px;
+  }
+
+  input[type="submit"] {
+    width: 180px;
+  }
+
+  .checkbox {
+    padding: 3px 20px;
+    text-align: center;
   }
 }
