@@ -1,0 +1,16 @@
+<div class="page-header content-component">
+  <h2>All users</h2>
+</div>
+
+<div class="content-component">
+  <ul class="list">
+    <% @users.each do |user| %>
+      <li>
+        <%= image_tag("user.png", alt: "thumb", class: "thumb") %>
+        <div class="info">
+          <%= link_to user.email, user, class: "title" %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
