@@ -3,17 +3,5 @@
 </div>
 
 <div class="content-component">
-  <%= form_for(@user, html: { class: "form-horizontal form-narrow" }) do |f| %>
-    <%= render 'shared/error_messages' %>
-
-    <fieldset>
-      <div class="form-group">
-        <%= f.email_field :email, placeholder: "Email", class: "form-control input-lg" %>
-      </div>
-    </fieldset>
-
-    <fieldset class="text-center">
-      <%= f.submit "Save", class: "btn btn-lg btn-primary" %>
-    </fieldset>
-  <% end %>
+  <%= render 'form' %>
 </div>
