@@ -5,14 +5,7 @@
 <div class="content-component">
   <%= will_paginate %>
   <ul class="list">
-    <% @users.each do |user| %>
-      <li>
-        <%= image_tag("user.png", alt: "thumb", class: "thumb") %>
-        <div class="info">
-          <%= link_to user.email, user, class: "title" %>
-        </div>
-      </li>
-    <% end %>
+    <%= render @users %>
   </ul>
   <%= will_paginate %>
 </div>
