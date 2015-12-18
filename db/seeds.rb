@@ -1,4 +1,4 @@
-User.create!(email: "test@mail.com", password: "password", password_confirmation: "password")
+User.create!(email: "test@mail.com", password: "password", password_confirmation: "password", is_admin: true)
 
 99.times do |n|
   email = "test-#{n+1}@mail.com"
