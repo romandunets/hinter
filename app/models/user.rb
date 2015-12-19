@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  before_save { email.downcase! }
+  before_save :downcase_email
 
   has_secure_password
 
@@ -32,4 +32,10 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  private
+
+    def downcase_email
+      self.email = email.downcase
+    end
 end
