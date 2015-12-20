@@ -1,7 +1,9 @@
 <div id="sidebar">
   <div class="text-center">
-    <%= image_tag("user.png", alt: "avatar", id: "avatar") %>
-    <span id="title"><%= current_user.email %></span>
+    <%= link_to @user do %>
+      <%= image_tag("user.png", alt: "avatar", id: "avatar") %>
+      <span id="title"><%= current_user.email %></span>
+    <% end %>
   </div>
   <nav id="navigation">
     <ul>
