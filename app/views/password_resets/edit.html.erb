@@ -1,0 +1,21 @@
+<div class="container vertical-center">
+  <h1 class="text-center">Reset password</h1>
+
+  <%= form_for(@user, url: password_reset_path(params[:id]), html: { class: "form-horizontal form-narrow" }) do |f| %>
+    <fieldset>
+      <%= hidden_field_tag :email, @user.email %>
+
+      <div class="form-group">
+        <%= f.password_field :password, placeholder: "Password", class: "form-control input-lg" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "form-control input-lg" %>
+      </div>
+    </fieldset>
+
+    <fieldset class="text-center">
+      <%= f.submit "Reset", class: "btn btn-lg btn-primary" %>
+    </fieldset>
+  <% end %>
+</div>
