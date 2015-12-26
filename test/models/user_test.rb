@@ -56,4 +56,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:remember, '')
   end
 
+  test "associated tasks should be destroyed" do
+    @user.save
+    @user.tasks.create!(title: "Add controller", description: "Add code for controller", priority: 2, state: "Open", deadline: DateTime.now + 1.days, user_id: @user.id)
+    assert_difference 'Task.count', -1 do
+      @user.destroy
+    end
+  end
+
 end
