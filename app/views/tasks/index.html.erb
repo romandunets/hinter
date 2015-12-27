@@ -1,0 +1,12 @@
+<div class="page-header content-component">
+  <h2>My tasks</h2>
+  | <%= link_to "New task", new_user_task_path %>
+</div>
+
+<div class="content-component">
+  <%= will_paginate %>
+  <ul class="list">
+    <%= render @tasks %>
+  </ul>
+  <%= will_paginate %>
+</div>
