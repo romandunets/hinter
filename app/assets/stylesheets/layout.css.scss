@@ -138,6 +138,7 @@ html, body, #page, #content, #cover {
 
 #content {
   display: inline-block;
+  height: auto;
   padding-left: 250px;
   background: #f5fafa image-url('overlay.png');
 
@@ -158,13 +159,25 @@ html, body, #page, #content, #cover {
     }
   }
 
-  .page-header h2 {
-    display: inline-block;
+  .page-header {
+    padding-bottom: 0px;
+
+    h2 {
+      display: inline-block;
+    }
+  }
+
+  .pagination {
+    margin: 0px;
+  }
+
+  .list-menu {
+    margin-top: 32px;
   }
 
   ul.list {
-    margin: 0;
-    padding: 0;
+    margin: 10px 0px;
+    padding: 0px;
     list-style: none;
 
     li {
