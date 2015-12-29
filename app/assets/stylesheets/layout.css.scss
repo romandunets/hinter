@@ -143,6 +143,7 @@ html, body, #page, #content, #cover {
 
 #content {
   display: inline-block;
+  min-height: 100%;
   height: auto;
   padding-left: 250px;
   background: #f5fafa image-url('overlay.png');
