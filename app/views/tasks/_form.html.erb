@@ -1,4 +1,6 @@
 <%= form_for(@task, html: { class: "form-horizontal form-narrow" }) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
   <fieldset>
     <div class="form-group">
       <%= f.text_field :title, placeholder: "Title", class: "form-control input-lg" %>

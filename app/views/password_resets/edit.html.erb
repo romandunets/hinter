@@ -2,6 +2,8 @@
   <h1 class="text-center">Reset password</h1>
 
   <%= form_for(@user, url: password_reset_path(params[:id]), html: { class: "form-horizontal form-narrow" }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
     <fieldset>
       <%= hidden_field_tag :email, @user.email %>
 
