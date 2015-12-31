@@ -1,3 +1,6 @@
-<li>
-  <%= link_to task.title, task %>
-</li>
+<tr>
+  <td>
+    <div class="row"><%= task.title %></div>
+    <div class="row"><%= distance_to_deadline_in_words(task.deadline) %></div>
+  </td>
+</tr>

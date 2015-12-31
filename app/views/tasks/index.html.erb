@@ -7,8 +7,10 @@
 
 <div class="content-component">
   <%= will_paginate %>
-  <ul class="list">
-    <%= render @tasks %>
-  </ul>
+  <table class="table">
+    <tbody>
+      <%= render @tasks %>
+    </tbody>
+  </table>
   <%= will_paginate %>
 </div>
