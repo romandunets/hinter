@@ -1,0 +1,33 @@
+<div class="page-header content-component">
+  <h2><%= @task.title %></h2>
+  | <%= link_to "Delete", @task, method: :delete, data: { confirm: "You sure?" } %>
+</div>
+
+<div class="content-component">
+  <div class="pull-left profile-info">
+    <dl>
+      <dt>
+        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+        Status
+      </dt>
+      <dd>
+        <%= @task.state %>
+      </dd>
+      <dt>
+        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+        Deadline
+      </dt>
+      <dd>
+        <%= @task.deadline.to_s %>
+        (<%= distance_to_deadline_in_words(@task.deadline) %>)
+      </dd>
+      <dt>
+        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+        Priority
+      </dt>
+      <dd>
+        <%= priority_in_words(@task.priority) %>
+      </dd>
+    </dl>
+  </div>
+</div>
