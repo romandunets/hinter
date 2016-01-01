@@ -1,6 +1,17 @@
 <tr>
   <td>
-    <div class="row"><%= task.title %></div>
-    <div class="row"><%= distance_to_deadline_in_words(task.deadline) %></div>
+    <div class="row">
+      <h4><%= task.title %></h4>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+        <%= distance_to_deadline_in_words(task.deadline) %>
+      </div>
+      <div class="cell">
+        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+        <%= priority_in_words(task.priority) %>
+      </div>
+    </div>
   </td>
 </tr>
