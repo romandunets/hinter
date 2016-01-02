@@ -168,6 +168,7 @@ html, body, #page, #content, #cover {
 
   .page-header {
     padding-bottom: 0px;
+    border-bottom: 1px solid #cccccc;
 
     h2 {
       display: inline-block;
@@ -176,6 +177,10 @@ html, body, #page, #content, #cover {
 
   .pagination {
     margin: 0px;
+  }
+
+  div.pagination {
+    margin-bottom: 5px;
   }
 
   .list-menu {
