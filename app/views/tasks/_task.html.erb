@@ -1,4 +1,4 @@
-<tr>
+<%= content_tag :tr, data: { link: task_path(task) } do %>
   <td>
     <div class="row">
       <h4><%= task.title %></h4>
@@ -14,4 +14,4 @@
       </div>
     </div>
   </td>
-</tr>
+<% end %>

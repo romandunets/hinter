@@ -213,16 +213,22 @@ html, body, #page, #content, #cover {
   }
 
   .table {
-    .row {
-      margin: 0px;
-
-      h4 {
-        margin: 0px 0px 5px 0px;
+    tr {
+      &:hover {
+        cursor: pointer;
       }
 
-      .cell {
-        float: left;
-        min-width: 200px;
+      .row {
+        margin: 0px;
+
+        h4 {
+          margin: 0px 0px 5px 0px;
+        }
+
+        .cell {
+          float: left;
+          min-width: 200px;
+        }
       }
     }
   }
