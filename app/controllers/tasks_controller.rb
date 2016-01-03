@@ -1,12 +1,12 @@
 class TasksController < ApplicationController
   before_action :logged_in_user
+  before_filter :load_task, only: [:show, :edit, :update, :destroy, :start, :close]
 
   def index
     @tasks = current_user.tasks.paginate(page: params[:page])
   end
 
   def show
-    @task = Task.find(params[:id])
   end
 
   def new
@@ -24,11 +24,9 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
   end
 
   def update
-    @task = Task.find(params[:id])
     if @task.update_attributes(task_params)
       flash[:success] = "Task was successfully updated."
       redirect_to @task
@@ -38,19 +36,16 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    Task.find(params[:id]).destroy
     flash[:success] = "Task was successfully deleted."
     redirect_to tasks_url
   end
 
   def start
-    @task = Task.find(params[:id])
     @task.start
     redirect_to @task
   end
 
   def close
-    @task = Task.find(params[:id])
     @task.close
     redirect_to @task
   end
@@ -59,5 +54,9 @@ class TasksController < ApplicationController
 
     def task_params
       params.require(:task).permit(:title, :priority, :deadline, :description)
+    end
+
+    def load_task
+      @task = Task.find(params[:id])
     end
 end
