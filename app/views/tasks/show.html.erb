@@ -8,6 +8,8 @@
 
 <div class="content-component">
   <div class="pull-left profile-info">
+    <%= link_to "Start", start_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.open? %>
+
     <dl>
       <dt>
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
