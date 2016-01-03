@@ -1,6 +1,9 @@
 <div class="page-header content-component">
   <h2><%= @task.title %></h2>
-  | <%= link_to "Delete", @task, method: :delete, data: { confirm: "You sure?" } %>
+  <div class="list-menu pull-right">
+    <%= link_to "Update", edit_task_path(@task) %>
+    | <%= link_to "Delete", @task, method: :delete, data: { confirm: "You sure?" } %>
+  </div>
 </div>
 
 <div class="content-component">

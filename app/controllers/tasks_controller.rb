@@ -23,6 +23,20 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    if @task.update_attributes(task_params)
+      flash[:success] = "Task was successfully updated."
+      redirect_to @task
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     Task.find(params[:id]).destroy
     flash[:success] = "Task was successfully deleted."
