@@ -9,6 +9,7 @@
 <div class="content-component">
   <div class="pull-left profile-info">
     <%= link_to "Start", start_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.open? %>
+    <%= link_to "Close", close_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.in_progress? %>
 
     <dl>
       <dt>

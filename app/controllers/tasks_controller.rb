@@ -49,6 +49,12 @@ class TasksController < ApplicationController
     redirect_to @task
   end
 
+  def close
+    @task = Task.find(params[:id])
+    @task.close
+    redirect_to @task
+  end
+
   private
 
     def task_params

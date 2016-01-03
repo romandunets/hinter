@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :tasks do
   	member do
   	  get :start
+  	  get :close
   	end
   end
 
