@@ -1,5 +1,5 @@
 $(function() {
-  $("[data-link]").click(function(e) {
+  $(document).on("click", "[data-link]", function(e) {
     window.location.href = $(this).data("link");
   });
 });
