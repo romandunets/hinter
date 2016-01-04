@@ -20,11 +20,13 @@
     </div>
   </div>
 
-  <div id="messages">
-    <% flash.each do |message_type, message| %>
-      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-    <% end %>
-  </div>
+  <% if flash.present? %>
+    <div id="messages">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+    </div>
+  <% end %>
 
   <div id="content">
     <%= yield %>
