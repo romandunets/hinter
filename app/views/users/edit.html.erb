@@ -3,5 +3,18 @@
 </div>
 
 <div class="content-component">
-  <%= render 'form' %>
+  <%= form_for(@user, html: { class: "form-horizontal form-aligned" }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <fieldset>
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10 form-group">
+        <%= f.email_field :email, placeholder: "Email", class: "form-control input-lg" %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <%= f.submit "Save", class: "btn btn-lg btn-primary pull-right" %>
+    </fieldset>
+  <% end %>
 </div>

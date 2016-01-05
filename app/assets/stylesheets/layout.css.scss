@@ -172,6 +172,7 @@ html, body, #page, #content, #cover {
 
     h2 {
       display: inline-block;
+      margin-top: 10px;
     }
   }
 
@@ -184,7 +185,7 @@ html, body, #page, #content, #cover {
   }
 
   .list-menu {
-    margin-top: 32px;
+    margin-top: 25px;
   }
 
   ul.list {
@@ -251,3 +252,23 @@ html, body, #page, #content, #cover {
     text-align: center;
   }
 }
+
+.form-aligned {
+  max-width: 500px;
+  margin: auto;
+
+  label {
+    font-size: 18px;
+    line-height: 34px;
+  }
+
+  fieldset {
+    margin: 10px 0px;
+  }
+
+  input[type="submit"] {
+    width: 140px;
+    margin: 0px 30px;
+  }
+}
+
