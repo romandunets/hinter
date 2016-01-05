@@ -1,5 +1,27 @@
 <div class="container vertical-center">
   <h1 class="text-center">Sign up</h1>
 
-  <%= render 'form' %>
+  <%= form_for(@user, html: { class: "form-horizontal form-narrow" }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <fieldset>
+      <div class="form-group">
+        <%= f.email_field :email, placeholder: "Email", class: "form-control input-lg" %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="form-group">
+        <%= f.password_field :password, placeholder: "Password", class: "form-control input-lg" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "form-control input-lg" %>
+      </div>
+    </fieldset>
+
+    <fieldset class="text-center">
+      <%= f.submit "Create", class: "btn btn-lg btn-primary" %>
+    </fieldset>
+  <% end %>
 </div>
