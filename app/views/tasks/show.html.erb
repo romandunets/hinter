@@ -7,33 +7,37 @@
 </div>
 
 <div class="content-component">
-  <div class="pull-left profile-info">
-    <%= link_to "Start", start_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.open? %>
-    <%= link_to "Close", close_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.in_progress? %>
+  <div class="profile-info list-info">
+    <div class="pull-left">
+      <dl class="dl-horizontal">
+        <dt>
+          <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+          Status
+        </dt>
+        <dd>
+          <%= @task.state %>
+        </dd>
+        <dt>
+          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          Deadline
+        </dt>
+        <dd>
+          <%= to_datetime_format(@task.deadline) %>
+          (<%= distance_to_deadline_in_words(@task.deadline) %>)
+        </dd>
+        <dt>
+          <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+          Priority
+        </dt>
+        <dd>
+          <%= priority_in_words(@task.priority) %>
+        </dd>
+      </dl>
+    </div>
 
-    <dl>
-      <dt>
-        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-        Status
-      </dt>
-      <dd>
-        <%= @task.state %>
-      </dd>
-      <dt>
-        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-        Deadline
-      </dt>
-      <dd>
-        <%= @task.deadline.to_s %>
-        (<%= distance_to_deadline_in_words(@task.deadline) %>)
-      </dd>
-      <dt>
-        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
-        Priority
-      </dt>
-      <dd>
-        <%= priority_in_words(@task.priority) %>
-      </dd>
-    </dl>
+    <div class="action-menu pull-right">
+      <%= link_to "Start", start_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.open? %>
+      <%= link_to "Close", close_task_path(@task), role: "button", class: "btn btn-default btn-primary" if @task.in_progress? %>
+    </div>
   </div>
 </div>
