@@ -1,8 +1,12 @@
 <div class="page-header content-component">
   <h2>My profile</h2>
-  <% if current_user.is_admin? && !current_user?(@user) %>
-    | <%= link_to "Delete", @user, method: :delete, data: { confirm: "You sure?" } %>
-  <% end %>
+  <div class="list-menu pull-right">
+    <% if current_user?(@user) %>
+      <%= link_to "Edit", edit_user_path(@user) %>
+    <% elsif current_user.is_admin? %>
+      <%= link_to "Delete", @user, method: :delete, data: { confirm: "You sure?" } %>
+    <% end %>
+  </div>
 </div>
 
 <div class="content-component">
