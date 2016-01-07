@@ -1,33 +1,42 @@
-<%= form_for(@task, html: { class: "form-horizontal form-narrow" }) do |f| %>
+<%= form_for(@task, html: { class: "form-horizontal form-aligned" }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
   <fieldset>
     <div class="form-group">
-      <%= f.text_field :title, placeholder: "Title", class: "form-control input-lg" %>
+      <label class="control-label col-sm-3" for="title">Title:</label>
+      <div class="col-sm-9">
+        <%= f.text_field :title, class: "form-control input-lg" %>
+      </div>
     </div>
   </fieldset>
 
   <fieldset>
     <div class="form-group">
-      <%= f.select :priority, options_for_select([["Low", 1], ["Medium", 2], ["High", 3]]), {}, class: "form-control input-lg" %>
+      <label class="control-label col-sm-3" for="priority">Priority:</label>
+      <div class="col-sm-9">
+        <%= f.select :priority, options_for_select([["Low", 1], ["Medium", 2], ["High", 3]], 2), {}, class: "form-control input-lg" %>
+      </div>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :deadline, placeholder: "Deadline", class: "form-control input-lg" %>
+      <label class="control-label col-sm-3" for="deadline">Deadline:</label>
+      <div class="col-sm-9">
+        <%= f.text_field :deadline, class: "form-control input-lg" %>
+      </div>
     </div>
   </fieldset>
 
   <fieldset>
     <div class="form-group">
-      <%= f.text_area :description, class: "form-control input-lg" %>
+      <label class="control-label col-sm-3" for="description">Description:</label>
+      <div class="col-sm-9">
+        <%= f.text_area :description, class: "form-control input-lg" %>
+      </div>
     </div>
   </fieldset>
 
-  <fieldset class="text-center">
-    <% if @task.new_record? %>
-      <%= f.submit "Create", class: "btn btn-lg btn-primary" %>
-    <% else %>
-      <%= f.submit "Save", class: "btn btn-lg btn-primary" %>
-    <% end %>
+  <fieldset>
+    <%= link_to "Cancel", :back, class: "btn btn-lg btn-default pull-left" %>
+    <%= f.submit "Save", class: "btn btn-lg btn-primary pull-right" %>
   </fieldset>
 <% end %>
