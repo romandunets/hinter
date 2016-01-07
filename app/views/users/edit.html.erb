@@ -7,9 +7,11 @@
     <%= render 'shared/error_messages', object: f.object %>
 
     <fieldset>
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-10 form-group">
-        <%= f.email_field :email, placeholder: "Email", class: "form-control input-lg" %>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="email">Email:</label>
+        <div class="col-sm-9">
+          <%= f.email_field :email, placeholder: "Email", class: "form-control input-lg" %>
+        </div>
       </div>
     </fieldset>
 
