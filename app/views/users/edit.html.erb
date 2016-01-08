@@ -16,6 +16,21 @@
     </fieldset>
 
     <fieldset>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="first_name">First name:</label>
+        <div class="col-sm-9">
+          <%= f.text_field :first_name, placeholder: "First name", class: "form-control input-lg" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <label class="control-label col-sm-3" for="second_name">Second name:</label>
+        <div class="col-sm-9">
+          <%= f.text_field :second_name, placeholder: "Second name", class: "form-control input-lg" %>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
       <%= link_to "Cancel", :back, class: "btn btn-lg btn-default pull-left" %>
       <%= f.submit "Save", class: "btn btn-lg btn-primary pull-right" %>
     </fieldset>
