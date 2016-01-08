@@ -10,7 +10,7 @@
         <div class="pull-right">
           <li>
             <% if logged_in? %>
-              <%= link_to current_user.email, user_path(current_user) %>
+              <%= link_to current_user.name, user_path(current_user) %>
             <% else %>
               <%= link_to "LOG IN", login_path %>
             <% end %>
