@@ -1,11 +1,13 @@
-<li>
-  <%= image_tag("user.png", alt: "thumb", class: "thumb") %>
-  <div class="info">
-    <ul class="list">
-      <% if user.first_name.present? and user.second_name.present? %>
-        <li><%= link_to user.name, user, class: "title" %></li>
-      <% end %>
-      <li><%= link_to user.email, user, class: "title" %></li>
-    </ul>
-  </div>
-</li>
+<%= content_tag :tr, data: { link: user_path(user) } do %>
+  <td>
+    <%= image_tag("user.png", alt: "thumb", class: "thumb pull-left") %>
+    <div class="info pull-left">
+      <ul class="list">
+        <% if user.first_name.present? and user.second_name.present? %>
+          <h4><%= user.name %></h4>
+        <% end %>
+        <h4><%= user.email %></h4>
+      </ul>
+    </div>
+  </td>
+<% end %>
