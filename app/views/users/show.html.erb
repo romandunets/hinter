@@ -1,5 +1,5 @@
 <div class="page-header content-component">
-  <h2>My profile</h2>
+  <h2><%= current_user?(@user) ? "My profile" : "#{@user.name} profile" %></h2>
   <div class="list-menu pull-right">
     <% if current_user?(@user) %>
       <%= link_to "Edit", edit_user_path(@user) %>
