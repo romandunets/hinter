@@ -235,6 +235,12 @@ html, body, #page, #content, #cover {
           vertical-align: top;
           font-size: 20px
         }
+
+        ul.list {
+          display: inline-block;
+          margin: 0px;
+          vertical-align: top;
+        }
       }
     }
   }
