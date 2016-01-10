@@ -12,9 +12,12 @@ class Task < ActiveRecord::Base
   default_scope -> { order(:deadline) }
 
   state_machine :state, initial: :open do
+    after_transition :on => :close, :do => :closed
+
     event :start do
       transition [:open] => :in_progress
     end
+
     event :close do
       transition [:open, :in_progress] => :done
     end
@@ -24,5 +27,9 @@ class Task < ActiveRecord::Base
 
     def validate_deadline
       errors.add(:deadline, "can't be in the past") if deadline.present? and deadline < DateTime.now
+    end
+
+    def close
+      update_attribute(:closed_at, DateTime.now)
     end
 end
