@@ -9,7 +9,7 @@ class Task < ActiveRecord::Base
 
   validate :validate_deadline
 
-  default_scope -> { order(closed_at: :asc, deadline: :asc) }
+  default_scope -> { order(closed_at: :asc, priority: :desc, deadline: :asc) }
 
   state_machine :state, initial: :open do
     after_transition :on => :close, :do => :closed
