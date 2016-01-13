@@ -1,5 +1,15 @@
 en:
+  actions:
+    delete: Delete
+    edit: Edit
   tasks:
+    actions:
+      close: Close
+      start: Start
+    fields:
+      deadline: Deadline
+      priority: Priority
+      state: State
     states:
       open: Open
       in_progress: In progress
