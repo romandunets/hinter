@@ -3,7 +3,9 @@
 
   <fieldset>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="title">Title:</label>
+      <label class="control-label col-sm-3" for="title">
+        <%= t("tasks.fields.title") %>
+      </label>
       <div class="col-sm-9">
         <%= f.text_field :title, class: "form-control input-lg" %>
       </div>
@@ -12,14 +14,18 @@
 
   <fieldset>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="priority">Priority:</label>
+      <label class="control-label col-sm-3" for="priority">
+        <%= t("tasks.fields.priority") %>
+      </label>
       <div class="col-sm-9">
         <%= f.select :priority, options_for_select([["Low", 1], ["Medium", 2], ["High", 3]], 2), {}, class: "form-control input-lg" %>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label col-sm-3" for="deadline">Deadline:</label>
+      <label class="control-label col-sm-3" for="deadline">
+        <%= t("tasks.fields.deadline") %>
+      </label>
       <div class="col-sm-9">
         <%= f.text_field :deadline, class: "form-control input-lg" %>
       </div>
@@ -28,7 +34,9 @@
 
   <fieldset>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="description">Description:</label>
+      <label class="control-label col-sm-3" for="description">
+        <%= t("tasks.fields.description") %>
+      </label>
       <div class="col-sm-9">
         <%= f.text_area :description, class: "form-control input-lg" %>
       </div>
@@ -36,7 +44,7 @@
   </fieldset>
 
   <fieldset>
-    <%= link_to "Cancel", :back, class: "btn btn-lg btn-default pull-left" %>
-    <%= f.submit "Save", class: "btn btn-lg btn-primary pull-right" %>
+    <%= link_to t("actions.cancel"), :back, class: "btn btn-lg btn-default pull-left" %>
+    <%= f.submit t("actions.save"), class: "btn btn-lg btn-primary pull-right" %>
   </fieldset>
 <% end %>

@@ -2,14 +2,23 @@ en:
   actions:
     delete: Delete
     edit: Edit
+    save: Save
   tasks:
     actions:
       close: Close
       start: Start
+    edit:
+      title: Edit
     fields:
       deadline: Deadline
+      description: Description
       priority: Priority
       state: State
+      title: Title
+    index:
+      my_tasks: My tasks
+    new:
+      title: New task
     states:
       open: Open
       in_progress: In progress
