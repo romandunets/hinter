@@ -1,6 +1,6 @@
 <%= content_tag :tr, data: { link: user_path(user) } do %>
   <td>
-    <%= image_tag("user.png", alt: "thumb", class: "thumb pull-left") %>
+    <%= image_tag(user.avatar.url(:thumb), alt: "thumb", class: "thumb pull-left") %>
     <div class="info pull-left">
       <ul class="list">
         <% if user.first_name.present? and user.second_name.present? %>
