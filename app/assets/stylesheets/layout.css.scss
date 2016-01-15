@@ -248,6 +248,15 @@ html, body, #page, #content, #cover {
         max-width: 100px;
         max-height: 100px;
       }
+
+      .statebox {
+        margin-right: 10px;
+
+        img.thumb {
+          max-width: 44px;
+          max-height: 44px;
+        }
+      }
     }
   }
 }

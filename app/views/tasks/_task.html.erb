@@ -1,16 +1,21 @@
 <%= content_tag :tr, data: { link: task_path(task) } do %>
   <td>
-    <div class="row">
-      <h4><%= task.title %></h4>
+    <div class="pull-left statebox">
+      <%= image_tag("checked_uncheckbox.png", alt: t("tasks.states.done"), id: "task_checkbox", class: "thumb") %>
     </div>
-    <div class="row">
-      <div class="cell">
-        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-        <%= distance_to_deadline_in_words(task) %>
+    <div class="pull-left">
+      <div class="row">
+        <h4><%= task.title %></h4>
       </div>
-      <div class="cell">
-        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
-        <%= priority_in_words(task.priority) %>
+      <div class="row">
+        <div class="cell">
+          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          <%= distance_to_deadline_in_words(task) %>
+        </div>
+        <div class="cell">
+          <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+          <%= priority_in_words(task.priority) %>
+        </div>
       </div>
     </div>
   </td>
