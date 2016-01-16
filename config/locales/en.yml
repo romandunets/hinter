@@ -19,6 +19,14 @@ en:
       my_tasks: My tasks
     new:
       title: New task
+    messages:
+      closed: Closed %{distance} ago
+      late: Late for %{distance}
+      left: Left %{distance}
+    priorities:
+      low: Low
+      medium: Medium
+      high: High
     states:
       open: Open
       in_progress: In progress
