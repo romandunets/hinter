@@ -21,6 +21,14 @@ class Task < ActiveRecord::Base
     event :close do
       transition [:open, :in_progress] => :done
     end
+
+    event :undo do
+      transition [:done] => :open
+    end
+  end
+
+  def toggle_state
+    open? ? close : undo
   end
 
   private

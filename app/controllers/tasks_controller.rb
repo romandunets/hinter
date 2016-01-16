@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :logged_in_user
-  before_filter :load_task, only: [:show, :edit, :update, :destroy, :start, :close]
+  before_filter :load_task, only: [:show, :edit, :update, :destroy, :start, :close, :toggle_state]
 
   def index
     @tasks = current_user.tasks.paginate(page: params[:page])
@@ -48,6 +48,11 @@ class TasksController < ApplicationController
   def close
     @task.close
     redirect_to @task
+  end
+
+  def toggle_state
+    @task.toggle_state
+    redirect_to :back
   end
 
   private

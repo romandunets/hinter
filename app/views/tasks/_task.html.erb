@@ -1,7 +1,7 @@
 <%= content_tag :tr, data: { link: task_path(task) } do %>
   <td>
     <div class="pull-left statebox">
-      <%= image_tag(task.done? ? "checked_checkbox.png" : "unchecked_checkbox.png", alt: t("tasks.states.done"), id: "task_checkbox", class: "thumb") %>
+      <%= link_to image_tag(task.done? ? "checked_checkbox.png" : "unchecked_checkbox.png", alt: t("tasks.states.done"), class: "thumb task_checkbox non-linkable"), toggle_state_task_path(task) %>
     </div>
     <div class="pull-left">
       <div class="row">

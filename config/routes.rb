@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   	member do
   	  get :start
   	  get :close
+      get :toggle_state
   	end
   end
 

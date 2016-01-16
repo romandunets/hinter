@@ -1,5 +1,7 @@
 $(function() {
   $(document).on("click", "[data-link]", function(e) {
-    window.location.href = $(this).data("link");
+    if (!$(e.target).hasClass("non-linkable")) {
+      window.location.href = $(this).data("link");
+    }
   });
 });
