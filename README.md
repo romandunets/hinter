@@ -11,28 +11,29 @@ You need to must a git client to clone the repository. You can get it from [http
 
 Also you must to have Ruby 2.2 and Rails 4.0.0+ installed.
 
-### Clone hinter
+### Installation
 
-Clone the hinter repository using git:
+1. Clone the hinter repository using git:
 
-```
-git clone https://github.com/romandunets/hinter.git
-```
+    ```
+    git clone https://github.com/romandunets/hinter.git
+    ```
 
-### Install gems
-```
-bundle install
-```
+1. Install gems
+    ```
+    bundle install
+    ```
 
-### Initialize database
-```
-rake db:create db:migrate db:seed
-```
+1. Initialize database
+    ```
+    rake db:create db:migrate db:seed
+    ```
 
-### Run the application in localhost
-```
-rails server
-```
+1. Run the application in localhost
+    ```
+    rails server
+    ```
+
 ## Running tests
 
 The application has rspec tests for models. You can run them using bundle:
