@@ -1,5 +1,5 @@
 # Hinter
-This project is web-based personal organizer tool on Rails 4.
+This project is web-based personal organizer tool on Rails 4. Basically, an application is enhanced version of task list with a few cool features to make it  useful in real life.
 
 ## Getting Started
 
