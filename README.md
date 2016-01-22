@@ -1,6 +1,9 @@
 # Hinter
 This project is web-based personal organizer tool on Rails 4. Basically, an application is enhanced version of task list with a few cool features to make it  useful in real life.
 
+## Features
+Hinter provides user management so a visitor can register with an email address and password to create an account. Te application provides authentication so access to the site can be limited to users who are registered and logged in. Authorized users can view, create, update and delete own tasks as well as change their state (open, in progress, done).
+
 ## Getting Started
 
 To get you started you can simply clone the hinter repository, install gems, initialize database and run the application.
